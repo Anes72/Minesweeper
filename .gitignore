@@ -1,0 +1,53 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub/
+build/
+flutter_*.png
+
+# Visual Studio Code
+.vscode/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+
+# Android
+.gradle/
+**/gradle-wrapper.jar
+**/gradlew
+**/gradlew.bat
+local.properties
+**/GeneratedPluginRegistrant.java
+
+# Web
+lib/generated_plugin_registrant.dart
+
+# macOS
+macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Windows
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugin_registrant.h
+
+# Linux
+linux/flutter/generated_plugin_registrant.cc
+linux/flutter/generated_plugin_registrant.h
+
+# Misc
+*.lock
+*.log
+*.tmp
+*.swp
+*.DS_Store
+
+# Firebase or other secrets (if any)
+google-services.json
+GoogleService-Info.plist
