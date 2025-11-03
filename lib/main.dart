@@ -87,16 +87,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyHomePage()),
-                  );
+                  // Navigator.pushReplacement(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const MyHomePage()),
+                  // );
                 },
                 child: const Text(
                   "LAST GAME",
                   style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               ),
+              SizedBox(height: 5),
+              Text("Currently unavailable.", style: TextStyle(fontSize: 6, fontWeight: FontWeight.bold,color: const Color.fromARGB(197, 183, 164, 40), fontFamily: "Rubik")),
               SizedBox(height: 70),
               Text(
                 "CREATOR :",

@@ -22,6 +22,7 @@ class _GameState extends State<Game> {
   Timer? timer;
   var time = "".obs;
   bool xx = true;
+  int t = 0;
 
   var flag = false.obs;
   var dig = true.obs;
@@ -42,7 +43,7 @@ class _GameState extends State<Game> {
     timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
      if (xx) {
        seconds++;
-  if (seconds==1200) {
+  if (seconds==300) {
     showdialog("TIME OUT","PLAY AGAIN","MAIN MENU", Game(), MyHomePage(), false, false);
     
   }
@@ -123,7 +124,7 @@ class _GameState extends State<Game> {
                 ),
               ],
             ),
-            Text("You have 20 minutes!", style: TextStyle(fontSize: 6, fontWeight: FontWeight.bold,color: const Color.fromARGB(197, 183, 164, 40), fontFamily: "Rubik")),
+            Text("You have 5 minutes!", style: TextStyle(fontSize: 6, fontWeight: FontWeight.bold,color: const Color.fromARGB(197, 183, 164, 40), fontFamily: "Rubik")),
             
               SizedBox(
                 height: 608,
@@ -137,6 +138,7 @@ class _GameState extends State<Game> {
               ),
   
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   height: 40,
@@ -155,8 +157,10 @@ class _GameState extends State<Game> {
                     ],
                   ),
                 ),
-                SizedBox(width: 20),
-                Obx(
+                Container(
+                  child: Row(
+                    children: [
+                      Obx(
                   ()=> InkWell(
                     onTap: () {
                       dig.value = true;
@@ -210,7 +214,9 @@ class _GameState extends State<Game> {
                     ),
                   ),
                 ),
-                SizedBox(width: 30),
+                    ],
+                  ),
+                ),
                 InkWell(
                   onTap: (){
                     if (help>0) {
@@ -270,41 +276,144 @@ class _GameState extends State<Game> {
   void debut(int i) {
     start = false;
     setState(() {
+
       cases[i].mined = false;
       cases[i].covered = false;
       cases[i].bombsAr = 0;
-    
-      cases[i-9].mined = false;
-      cases[i-9].covered = false;
-      cases[i-9].bombsAr = cases[i-9].bombsAr -3;
+      if (cases[i].mined) {
+        t++;
+      }
 
-      cases[i-8].mined = false;
-      cases[i-8].covered = false;
-      cases[i-8].bombsAr = cases[i-8].bombsAr -4;
-
-      cases[i-7].mined = false;
-      cases[i-7].covered = false;
-      cases[i-7].bombsAr = cases[i-7].bombsAr -3;
-
-      cases[i-1].mined = false;
+      if (i<8) {
+        if (i>0) {
+          if (cases[i-1].mined) {
+        cases[i-1].mined = false;
+        t++;
+      }
       cases[i-1].covered = false;
       cases[i-1].bombsAr = cases[i-1].bombsAr -4;
+        }
 
-      cases[i+1].mined = false;
+      if (cases[i+1].mined) {
+        cases[i+1].mined = false;
+        t++;
+      }
       cases[i+1].covered = false;
       cases[i+1].bombsAr = cases[i+1].bombsAr -4;
 
-      cases[i+7].mined = false;
+      if (cases[i+7].mined) {
+        cases[i+7].mined = false;
+        t++;
+      }
       cases[i+7].covered = false;
       cases[i+7].bombsAr = cases[i+7].bombsAr -3;
 
-      cases[i+8].mined = false;
+      if (cases[i+8].mined) {
+        cases[i+8].mined = false;
+        t++;
+      }
       cases[i+8].covered = false;
       cases[i+8].bombsAr = cases[i+8].bombsAr -4;
 
-      cases[i+9].mined = false;
+      if (cases[i+9].mined) {
+        cases[i+9].mined = false;
+        t++;
+      }
       cases[i+9].covered = false;
       cases[i+9].bombsAr = cases[i+9].bombsAr -3;
+      }
+    
+      if (i>7 && i<105) {
+        if (cases[i-9].mined) {
+        cases[i-9].mined = false;
+        t++;
+      }
+      cases[i-9].covered = false;
+      cases[i-9].bombsAr = cases[i-9].bombsAr -3;
+
+      if (cases[i-8].mined) {
+        cases[i-8].mined = false;
+        t++;
+      }
+      cases[i-8].covered = false;
+      cases[i-8].bombsAr = cases[i-8].bombsAr -4;
+
+      if (cases[i-7].mined) {
+        cases[i-7].mined = false;
+        t++;
+      }
+      cases[i-7].covered = false;
+      cases[i-7].bombsAr = cases[i-7].bombsAr -3;
+
+      if (cases[i-1].mined) {
+        cases[i-1].mined = false;
+        t++;
+      }
+      cases[i-1].covered = false;
+      cases[i-1].bombsAr = cases[i-1].bombsAr -4;
+
+      if (cases[i+1].mined) {
+        cases[i+1].mined = false;
+        t++;
+      }
+      cases[i+1].covered = false;
+      cases[i+1].bombsAr = cases[i+1].bombsAr -4;
+
+      if (cases[i+7].mined) {
+        cases[i+7].mined = false;
+        t++;
+      }
+      cases[i+7].covered = false;
+      cases[i+7].bombsAr = cases[i+7].bombsAr -3;
+
+      if (cases[i+8].mined) {
+        cases[i+8].mined = false;
+        t++;
+      }
+      cases[i+8].covered = false;
+      cases[i+8].bombsAr = cases[i+8].bombsAr -4;
+
+      if (cases[i+9].mined) {
+        cases[i+9].mined = false;
+        t++;
+      }
+      cases[i+9].covered = false;
+      cases[i+9].bombsAr = cases[i+9].bombsAr -3;
+      }
+      if (i>104) {
+        if (cases[i-9].mined) {
+        cases[i-9].mined = false;
+        t++;
+      }
+      cases[i-9].covered = false;
+      cases[i-9].bombsAr = cases[i-9].bombsAr -3;
+
+      if (cases[i-8].mined) {
+        cases[i-8].mined = false;
+        t++;
+      }
+      cases[i-8].covered = false;
+      cases[i-8].bombsAr = cases[i-8].bombsAr -4;
+
+      if (cases[i-7].mined) {
+        cases[i-7].mined = false;
+        t++;
+      }
+      cases[i-7].covered = false;
+      cases[i-7].bombsAr = cases[i-7].bombsAr -3;
+
+      if (cases[i-1].mined) {
+        cases[i-1].mined = false;
+        t++;
+      }
+      cases[i-1].covered = false;
+      cases[i-1].bombsAr = cases[i-1].bombsAr -4;
+
+      if (i<112) {
+        
+      }
+      }
+      
 
       cases = env(cases);
     });
@@ -316,8 +425,9 @@ class _GameState extends State<Game> {
   Future<int?> counting(bool x) async {
     if (x) {
       count++;
+      print(count);
     }
-    if (count == 86) {
+    if (count == 87+t) {
       end.value = true;
       await Future.delayed(Duration(seconds: 1));
       showdialog("YOU WON!","PLAY AGAIN","MAIN MENU", Game(), MyHomePage(), false, false);
@@ -535,7 +645,7 @@ class _caseeState extends State<casee> {
           if (widget.start) {
             widget.debut(widget.index);
           }else{
-            widget.counting();
+            widget.counting(true);
           }
         }
         if (isItMined && widget.flag.value == false) {
