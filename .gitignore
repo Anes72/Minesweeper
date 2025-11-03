@@ -51,3 +51,8 @@ linux/flutter/generated_plugin_registrant.h
 # Firebase or other secrets (if any)
 google-services.json
 GoogleService-Info.plist
+
+# Desktop builds
+windows/
+linux/
+macos/
