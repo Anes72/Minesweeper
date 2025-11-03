@@ -287,134 +287,138 @@ class _GameState extends State<Game> {
       if (i<8) {
         if (i>0) {
           if (cases[i-1].mined) {
-        cases[i-1].mined = false;
-        t++;
-      }
-      cases[i-1].covered = false;
-      cases[i-1].bombsAr = cases[i-1].bombsAr -4;
+            cases[i-1].mined = false;
+            t++;
+          }
+          cases[i-1].covered = false;
+          cases[i-1].bombsAr = cases[i-1].bombsAr -4;
         }
 
-      if (cases[i+1].mined) {
-        cases[i+1].mined = false;
-        t++;
-      }
-      cases[i+1].covered = false;
-      cases[i+1].bombsAr = cases[i+1].bombsAr -4;
+        if (cases[i+1].mined) {
+          cases[i+1].mined = false;
+          t++;
+        }
+        cases[i+1].covered = false;
+        cases[i+1].bombsAr = cases[i+1].bombsAr -4;
 
-      if (cases[i+7].mined) {
-        cases[i+7].mined = false;
-        t++;
-      }
-      cases[i+7].covered = false;
-      cases[i+7].bombsAr = cases[i+7].bombsAr -3;
+        if (cases[i+7].mined) {
+          cases[i+7].mined = false;
+          t++;
+        }
+        cases[i+7].covered = false;
+        cases[i+7].bombsAr = cases[i+7].bombsAr -3;
 
-      if (cases[i+8].mined) {
-        cases[i+8].mined = false;
-        t++;
-      }
-      cases[i+8].covered = false;
-      cases[i+8].bombsAr = cases[i+8].bombsAr -4;
+        if (cases[i+8].mined) {
+          cases[i+8].mined = false;
+          t++;
+        }
+        cases[i+8].covered = false;
+        cases[i+8].bombsAr = cases[i+8].bombsAr -4;
 
-      if (cases[i+9].mined) {
-        cases[i+9].mined = false;
-        t++;
-      }
-      cases[i+9].covered = false;
-      cases[i+9].bombsAr = cases[i+9].bombsAr -3;
+        if (cases[i+9].mined) {
+          cases[i+9].mined = false;
+          t++;
+        }
+        cases[i+9].covered = false;
+        cases[i+9].bombsAr = cases[i+9].bombsAr -3;
       }
     
       if (i>7 && i<105) {
         if (cases[i-9].mined) {
-        cases[i-9].mined = false;
-        t++;
-      }
-      cases[i-9].covered = false;
-      cases[i-9].bombsAr = cases[i-9].bombsAr -3;
+          cases[i-9].mined = false;
+          t++;
+        }
+        cases[i-9].covered = false;
+        cases[i-9].bombsAr = cases[i-9].bombsAr -3;
 
-      if (cases[i-8].mined) {
-        cases[i-8].mined = false;
-        t++;
-      }
-      cases[i-8].covered = false;
-      cases[i-8].bombsAr = cases[i-8].bombsAr -4;
+        if (cases[i-8].mined) {
+          cases[i-8].mined = false;
+          t++;
+        }
+        cases[i-8].covered = false;
+        cases[i-8].bombsAr = cases[i-8].bombsAr -4;
 
-      if (cases[i-7].mined) {
-        cases[i-7].mined = false;
-        t++;
-      }
-      cases[i-7].covered = false;
-      cases[i-7].bombsAr = cases[i-7].bombsAr -3;
+        if (cases[i-7].mined) {
+          cases[i-7].mined = false;
+          t++;
+        }
+        cases[i-7].covered = false;
+        cases[i-7].bombsAr = cases[i-7].bombsAr -3;
 
-      if (cases[i-1].mined) {
-        cases[i-1].mined = false;
-        t++;
-      }
-      cases[i-1].covered = false;
-      cases[i-1].bombsAr = cases[i-1].bombsAr -4;
+        if (cases[i-1].mined) {
+          cases[i-1].mined = false;
+          t++;
+        }
+        cases[i-1].covered = false;
+        cases[i-1].bombsAr = cases[i-1].bombsAr -4;
 
-      if (cases[i+1].mined) {
-        cases[i+1].mined = false;
-        t++;
-      }
-      cases[i+1].covered = false;
-      cases[i+1].bombsAr = cases[i+1].bombsAr -4;
+        if (cases[i+1].mined) {
+          cases[i+1].mined = false;
+          t++;
+        }
+        cases[i+1].covered = false;
+        cases[i+1].bombsAr = cases[i+1].bombsAr -4;
 
-      if (cases[i+7].mined) {
-        cases[i+7].mined = false;
-        t++;
-      }
-      cases[i+7].covered = false;
-      cases[i+7].bombsAr = cases[i+7].bombsAr -3;
+        if (cases[i+7].mined) {
+          cases[i+7].mined = false;
+          t++;
+        }
+        cases[i+7].covered = false;
+        cases[i+7].bombsAr = cases[i+7].bombsAr -3;
 
-      if (cases[i+8].mined) {
-        cases[i+8].mined = false;
-        t++;
-      }
-      cases[i+8].covered = false;
-      cases[i+8].bombsAr = cases[i+8].bombsAr -4;
+        if (cases[i+8].mined) {
+          cases[i+8].mined = false;
+          t++;
+        }
+        cases[i+8].covered = false;
+        cases[i+8].bombsAr = cases[i+8].bombsAr -4;
 
-      if (cases[i+9].mined) {
-        cases[i+9].mined = false;
-        t++;
-      }
-      cases[i+9].covered = false;
-      cases[i+9].bombsAr = cases[i+9].bombsAr -3;
+        if (cases[i+9].mined) {
+          cases[i+9].mined = false;
+          t++;
+        }
+        cases[i+9].covered = false;
+        cases[i+9].bombsAr = cases[i+9].bombsAr -3;
       }
       if (i>104) {
         if (cases[i-9].mined) {
-        cases[i-9].mined = false;
-        t++;
-      }
-      cases[i-9].covered = false;
-      cases[i-9].bombsAr = cases[i-9].bombsAr -3;
+          cases[i-9].mined = false;
+          t++;
+        }
+        cases[i-9].covered = false;
+        cases[i-9].bombsAr = cases[i-9].bombsAr -3;
 
-      if (cases[i-8].mined) {
-        cases[i-8].mined = false;
-        t++;
-      }
-      cases[i-8].covered = false;
-      cases[i-8].bombsAr = cases[i-8].bombsAr -4;
+        if (cases[i-8].mined) {
+          cases[i-8].mined = false;
+          t++;
+        }
+        cases[i-8].covered = false;
+        cases[i-8].bombsAr = cases[i-8].bombsAr -4;
 
-      if (cases[i-7].mined) {
-        cases[i-7].mined = false;
-        t++;
-      }
-      cases[i-7].covered = false;
-      cases[i-7].bombsAr = cases[i-7].bombsAr -3;
+        if (cases[i-7].mined) {
+          cases[i-7].mined = false;
+          t++;
+        }
+        cases[i-7].covered = false;
+        cases[i-7].bombsAr = cases[i-7].bombsAr -3;
 
-      if (cases[i-1].mined) {
-        cases[i-1].mined = false;
-        t++;
-      }
-      cases[i-1].covered = false;
-      cases[i-1].bombsAr = cases[i-1].bombsAr -4;
+        if (cases[i-1].mined) {
+          cases[i-1].mined = false;
+          t++;
+        }
+        cases[i-1].covered = false;
+        cases[i-1].bombsAr = cases[i-1].bombsAr -4;
 
-      if (i<112) {
-        
+        if (i<111) {
+          if (cases[i+1].mined) {
+            cases[i+1].mined = false;
+            t++;
+          }
+          cases[i+1].covered = false;
+          cases[i+1].bombsAr = cases[i-1].bombsAr -4;
+        }
       }
-      }
-      
-
+      br.value = br.value - t;
       cases = env(cases);
     });
 }
@@ -658,7 +662,7 @@ class _caseeState extends State<casee> {
             
           }
         }
-        if (widget.flag.value) {
+        if (widget.flag.value && isItCovered.value) {
           flaged.value = !flaged.value;
           if (flaged.value) {
             widget.decrement(true);
